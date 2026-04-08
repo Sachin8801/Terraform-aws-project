@@ -1,16 +1,34 @@
 variable "region" {
-  default = "ap-south-1"
+  description = "AWS region"
+  type        = string
 }
 
-variable "app_name" {}
-variable "environment" {}
+variable "app_name" {
+  description = "Application name"
+  type        = string
+}
 
-variable "cidr_block" {}
-variable "azs" {}
+variable "environment" {
+  description = "Environment name"
+  type        = string
+}
 
-variable "instance_type" {}
-variable "ami" {}
+variable "cidr_block" {
+  description = "VPC CIDR"
+  type        = string
+}
 
-variable "enable_rds" {
-  default = false
+variable "azs" {
+  description = "Availability Zones"
+  type        = list(string)
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+}
+
+variable "ami" {
+  description = "AMI ID"
+  type        = string
 }
